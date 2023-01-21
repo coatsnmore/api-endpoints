@@ -1,0 +1,1 @@
+curl -X POST localhost:8888?death=true -H "Content-Type: application/json" -d @request.json
