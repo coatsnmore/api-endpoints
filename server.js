@@ -1,5 +1,5 @@
 const http = require("http");
-
+const port = 8888;
 const server = http.createServer((request, response) => {
   const requestStart = Date.now();
 
@@ -32,7 +32,7 @@ const server = http.createServer((request, response) => {
         remoteAddress,
         remoteFamily,
         url
-      })
+      }, null, 2)
     );
   });
 
@@ -45,4 +45,5 @@ const process = (request, response) => {
   }, 100);
 };
 
-  server.listen(8888);
+console.log(`Listening on http://localhost:${port}...`);
+server.listen(port);
